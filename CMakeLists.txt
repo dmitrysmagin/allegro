@@ -438,7 +438,7 @@ if(ALLEGRO_UNIX) # not MACOSX
     endif(WANT_OSS)
 
     if(WANT_ALSA)
-        pkg_check_modules(ALSA alsa)
+        include(FindALSA) #pkg_check_modules(ALSA alsa)
         if(ALSA_FOUND)
             # ALSA 0.5 is beyond obsolete.
             set(ALLEGRO_ALSA_VERSION 9)
